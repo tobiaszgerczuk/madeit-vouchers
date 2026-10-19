@@ -1,0 +1,40 @@
+name: Release free plugin
+on:
+  push:
+    tags: ['v*.*.*']
+  workflow_dispatch:
+env:
+  PLUGIN_SLUG: madeit-vouchers
+  SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+  SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check PHP syntax
+        run: find . -name '*.php' -not -path './vendor/*' -not -path './dist/*' -print0 | xargs -0 -n1 php -l
+      - name: Run pure-logic tests
+        run: for t in tests/*.php; do case "$t" in */smoke.php|*/checkout.php|*/classic-checkout.php|*/tax.php|*/mixed-cart.php) ;; *) php "$t" ;; esac; done
+      - name: Verify tag, plugin header and readme stable tag agree
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          HEADER=$(grep -m1 -E '^[[:space:]*]*Version:' "$PLUGIN_SLUG.php" | sed -E 's/.*Version:[[:space:]]*//' | tr -d '[:space:]')
+          STABLE=$(grep -m1 -E '^Stable tag:' readme.txt | sed -E 's/.*Stable tag:[[:space:]]*//' | tr -d '[:space:]')
+          if [ "$HEADER" != "$VERSION" ] || [ "$STABLE" != "$VERSION" ]; then
+            echo "Tag $VERSION, Version header $HEADER and Stable tag $STABLE must be identical" >&2; exit 1
+          fi
+      - name: Build ZIP
+        run: ./bin/build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.PLUGIN_SLUG }}-${{ github.ref_name }}
+          path: dist/${{ env.PLUGIN_SLUG }}.zip
+      # Runs only after the plugin has been approved on WordPress.org and the SVN_USERNAME and SVN_PASSWORD secrets exist.
+      - name: Deploy to WordPress.org
+        if: startsWith(github.ref, 'refs/tags/v') && env.SVN_USERNAME != ''
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SLUG: ${{ env.PLUGIN_SLUG }}
+          ASSETS_DIR: .wordpress-org
