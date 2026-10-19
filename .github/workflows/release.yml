@@ -15,7 +15,11 @@ jobs:
       - name: Check PHP syntax
         run: find . -name '*.php' -not -path './vendor/*' -not -path './dist/*' -print0 | xargs -0 -n1 php -l
       - name: Run pure-logic tests
-        run: for t in tests/*.php; do case "$t" in */smoke.php|*/checkout.php|*/classic-checkout.php|*/tax.php|*/mixed-cart.php) ;; *) php "$t" ;; esac; done
+        run: |
+          shopt -s nullglob
+          for t in tests/*.php; do
+            case "$t" in */smoke.php|*/checkout.php|*/classic-checkout.php|*/tax.php|*/mixed-cart.php) ;; *) php "$t" ;; esac;
+          done
       - name: Verify tag, plugin header and readme stable tag agree
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
