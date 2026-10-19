@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Madeit Vouchers
- * Plugin URI: https://labs.madeit.pl/en/plugins/madeit-vouchers-pro
+ * Plugin URI: https://labs.made-it.pl/en/plugins/madeit-vouchers-pro
  * Description: Sell gift vouchers with a balance in WooCommerce. Customers receive a PDF with a code and can spend it across several orders.
  * Version: 1.0.0
  * Requires at least: 6.6
@@ -9,7 +9,7 @@
  * Requires PHP: 8.0
  * Requires Plugins: woocommerce
  * Author: WCO Labs
- * Author URI: https://labs.madeit.pl/en
+ * Author URI: https://labs.made-it.pl/en
  * License: GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: madeit-vouchers

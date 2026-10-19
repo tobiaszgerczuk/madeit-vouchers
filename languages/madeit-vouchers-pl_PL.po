@@ -24,7 +24,7 @@ msgstr "Madeit Vouchers"
 
 #. Plugin URI of the plugin
 #: madeit-vouchers.php
-msgid "https://labs.madeit.pl/en/madeit-vouchers"
+msgid "https://labs.made-it.pl/en/madeit-vouchers"
 msgstr ""
 
 #. Description of the plugin
@@ -39,7 +39,7 @@ msgstr ""
 
 #. Author URI of the plugin
 #: madeit-vouchers.php
-msgid "https://labs.madeit.pl/en"
+msgid "https://labs.made-it.pl/en"
 msgstr ""
 
 #: src/Admin.php:42
