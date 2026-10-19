@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- Removed the "Tested up to" line from the plugin header (it lives only in readme.txt). No functional changes.
+
 ## 1.0.2
 
 - Readme: the contributor is now the WordPress.org user madeitpl. No functional changes.
