@@ -1,0 +1,11 @@
+.git
+.github
+.gitignore
+.distignore
+.DS_Store
+tests
+dist
+node_modules
+bin
+CHANGELOG.md
+README.md

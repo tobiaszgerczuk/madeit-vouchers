@@ -1,0 +1,217 @@
+.madeit-voucher-recipient,
+.madeit-voucher-redeem {
+    box-sizing: border-box;
+    color: #1d2c42;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.madeit-voucher-recipient *,
+.madeit-voucher-redeem * { box-sizing: border-box; }
+
+.madeit-voucher-recipient {
+    --madeit-accent: #294a74;
+    width: 100%;
+    max-width: 680px;
+    margin: 30px 0 22px;
+    padding: clamp(20px, 3vw, 30px);
+    border: 1px solid color-mix(in srgb, var(--madeit-accent) 18%, #fff);
+    border-radius: 20px;
+    background: linear-gradient(160deg, #fff 0%, color-mix(in srgb, var(--madeit-accent) 3%, #fff) 100%);
+    box-shadow: 0 14px 38px rgba(24, 51, 92, .07);
+}
+
+.madeit-voucher-eyebrow {
+    display: block;
+    margin-bottom: 8px;
+    color: #4169a3;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .15em;
+    line-height: 1.3;
+}
+.madeit-voucher-recipient .madeit-voucher-eyebrow,
+.madeit-voucher-redeem .madeit-voucher-eyebrow { color: var(--madeit-accent); }
+
+.madeit-voucher-intro h3 {
+    margin: 0 0 6px;
+    color: color-mix(in srgb, var(--madeit-accent) 55%, #1a3154);
+    font-size: clamp(21px, 2.4vw, 26px);
+    font-weight: 750;
+    line-height: 1.25;
+}
+
+.madeit-voucher-intro p,
+.madeit-redeem-heading p {
+    margin: 0;
+    color: #64758d;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.madeit-voucher-choices {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 23px;
+}
+
+.madeit-voucher-choice {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    min-height: 100px;
+    margin: 0 !important;
+    padding: 16px;
+    border: 1.5px solid #dce5f0;
+    border-radius: 14px;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color .16s ease, background .16s ease, box-shadow .16s ease;
+}
+
+.madeit-voucher-choice:hover { border-color: #9eb8dc; background: #fbfdff; }
+.madeit-voucher-choice:has(input:checked),
+.madeit-voucher-choice.is-selected { border-color: var(--madeit-accent); background: color-mix(in srgb, var(--madeit-accent) 8%, #fff); box-shadow: 0 0 0 3px color-mix(in srgb, var(--madeit-accent) 12%, transparent); }
+.madeit-voucher-choice:focus-within { outline: 3px solid rgba(62, 116, 197, .45); outline-offset: 2px; }
+.madeit-voucher-choice input[type='radio'] { position: absolute; width: 1px; height: 1px; margin: 0; opacity: 0; }
+.madeit-voucher-choice-icon {
+    display: grid;
+    flex: 0 0 39px;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 11px;
+    color: var(--madeit-accent);
+    background: color-mix(in srgb, var(--madeit-accent) 10%, #fff);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+}
+.madeit-voucher-choice-copy { display: flex; flex: 1 1 auto; flex-direction: column; gap: 3px; min-width: 0; }
+.madeit-voucher-choice-copy strong { color: #233b5e; font-size: 15px; font-weight: 750; line-height: 1.3; }
+.madeit-voucher-choice-copy small { color: #73839a; font-size: 12px; line-height: 1.35; }
+.madeit-voucher-choice-check { flex: 0 0 17px; width: 17px; height: 17px; border: 1.5px solid #a8b8cc; border-radius: 50%; background: #fff; }
+.madeit-voucher-choice:has(input:checked) .madeit-voucher-choice-check,
+.madeit-voucher-choice.is-selected .madeit-voucher-choice-check { border: 5px solid var(--madeit-accent); }
+
+.madeit-voucher-design { margin-top: 24px; padding-top: 23px; border-top: 1px solid #e4ebf4; }
+.madeit-voucher-recipient.has-gallery-preview .madeit-voucher-design { display: none; }
+.madeit-voucher-design-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin-bottom: 15px; }
+.madeit-voucher-design-heading strong { color: #203b61; font-size: 16px; }
+.madeit-voucher-design-heading span { color: #73839a; font-size: 12px; }
+.madeit-voucher-preview { --voucher-accent: #294a74; box-sizing: border-box; position: relative; display: flex; flex-direction: column; overflow: hidden; width: 100%; aspect-ratio: 1.6; min-height: 230px; padding: clamp(20px, 4vw, 36px); border: 1px solid #dedbd2; border-radius: 12px; color: #26364d; background: #f8f6f0; box-shadow: 0 12px 22px rgba(23, 44, 72, .08); }
+.madeit-voucher-preview[data-color='forest'] { --voucher-accent: #356b56; }
+.madeit-voucher-preview[data-color='berry'] { --voucher-accent: #8b405c; }
+.madeit-voucher-preview[data-color='copper'] { --voucher-accent: #a5673c; }
+.madeit-voucher-preview[data-color='brand'] { --voucher-accent: var(--brand-accent); }
+.madeit-voucher-preview::before { position: absolute; inset: 11px; border: 1px solid var(--voucher-accent); content: ''; pointer-events: none; }
+.madeit-preview-brand { position: relative; z-index: 1; max-width: 70%; overflow: hidden; color: var(--voucher-accent); font-size: 11px; font-weight: 800; letter-spacing: .13em; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+.madeit-preview-title { position: relative; z-index: 1; margin-top: auto; font-size: clamp(34px, 6vw, 56px); font-weight: 800; letter-spacing: .03em; line-height: 1; }
+.madeit-preview-subtitle { position: relative; z-index: 1; margin-top: 8px; color: #677587; font-size: 13px; }
+.madeit-preview-value { position: relative; z-index: 1; margin-top: 20px; color: var(--voucher-accent); font-size: clamp(23px, 4vw, 34px); font-weight: 800; }
+.madeit-preview-value .woocommerce-Price-amount { color: inherit; }
+.madeit-preview-code { position: relative; z-index: 1; margin-top: 10px; color: #8895a5; font-size: 10px; letter-spacing: .09em; text-transform: uppercase; }
+.madeit-voucher-preview[data-template='modern'] { border-color: #1f2f43; color: #fff; background: #1f2f43; }
+.madeit-voucher-preview[data-template='modern']::before { inset: auto -50px 40px auto; width: 210px; height: 210px; border: 35px solid var(--voucher-accent); border-radius: 50%; opacity: .8; }
+.madeit-voucher-preview[data-template='modern'] .madeit-preview-brand,
+.madeit-voucher-preview[data-template='modern'] .madeit-preview-value { color: #fff; }
+.madeit-voucher-preview[data-template='modern'] .madeit-preview-subtitle,
+.madeit-voucher-preview[data-template='modern'] .madeit-preview-code { color: #bdcad8; }
+.madeit-voucher-preview[data-template='botanical'] { padding-left: clamp(45px, 9vw, 90px); border-color: #dceae0; background: linear-gradient(90deg, var(--voucher-accent) 0 13%, #f2f8f4 13% 100%); }
+.madeit-voucher-preview[data-template='botanical']::before { display: none; }
+.madeit-voucher-gallery-preview { min-height: 0; padding: clamp(22px, 3vw, 34px); }
+.madeit-voucher-gallery-preview .madeit-preview-title { font-size: clamp(28px, 5vw, 48px); }
+
+.madeit-voucher-gift-fields { display: grid; gap: 16px; margin-top: 22px; padding-top: 22px; border-top: 1px solid #e4ebf4; }
+.madeit-voucher-recipient.is-enhanced:not(.is-gift) .madeit-voucher-gift-fields { display: none; }
+.madeit-voucher-gift-fields label,
+.madeit-voucher-redeem label { display: flex !important; flex-direction: column; gap: 7px; margin: 0 !important; color: #2e4361; font-size: 13px; font-weight: 700; line-height: 1.35; }
+.madeit-voucher-gift-fields label small { color: #8896a9; font-size: 12px; font-weight: 500; }
+.madeit-voucher-gift-fields input,
+.madeit-voucher-gift-fields textarea,
+.madeit-voucher-redeem input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 12px 14px !important;
+    border: 1px solid #cad6e5 !important;
+    border-radius: 10px !important;
+    color: #213a5e !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    font: inherit;
+    font-size: 14px !important;
+    line-height: 1.45;
+}
+.madeit-voucher-gift-fields input:focus,
+.madeit-voucher-gift-fields textarea:focus,
+.madeit-voucher-redeem input:focus { border-color: var(--madeit-accent) !important; box-shadow: 0 0 0 3px color-mix(in srgb, var(--madeit-accent) 18%, transparent) !important; outline: 0; }
+.madeit-voucher-gift-fields textarea { min-height: 96px; resize: vertical; }
+.madeit-voucher-gift-fields input::placeholder,
+.madeit-voucher-gift-fields textarea::placeholder,
+.madeit-voucher-redeem input::placeholder { color: #9aa8ba; }
+
+.madeit-voucher-footnote { display: flex; align-items: flex-start; gap: 11px; margin-top: 22px; padding: 14px 16px; border-radius: 12px; background: #eaf4f1; }
+.madeit-voucher-footnote > span { display: grid; flex: 0 0 21px; place-items: center; width: 21px; height: 21px; border-radius: 50%; color: #177257; background: #d4eee4; font-size: 13px; font-weight: 800; }
+.madeit-voucher-footnote p { margin: 0 !important; color: #3f675b; font-size: 12px; line-height: 1.5; }
+.madeit-voucher-footnote strong { color: #205f4c; }
+
+body.single-product form.cart:has(.madeit-voucher-recipient) .single_add_to_cart_button {
+    min-height: 48px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: transform .16s ease, box-shadow .16s ease;
+}
+body.single-product form.cart:has(.madeit-voucher-recipient) .single_add_to_cart_button:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0, 0, 0, .14); }
+
+.madeit-voucher-redeem {
+    --madeit-accent: #294a74;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(160px, 1fr) auto;
+    align-items: end;
+    gap: 14px;
+    width: 100%;
+    margin: 18px 0 24px;
+    padding: 20px;
+    border: 1px solid color-mix(in srgb, var(--madeit-accent) 18%, #fff);
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--madeit-accent) 4%, #fff);
+}
+.madeit-redeem-heading strong { display: block; margin-bottom: 4px; color: color-mix(in srgb, var(--madeit-accent) 55%, #203b61); font-size: 17px; font-weight: 750; }
+.madeit-redeem-heading p { font-size: 12px; }
+.madeit-redeem-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.madeit-voucher-redeem button { min-height: 43px; margin: 0; padding: 10px 15px; border: 0; border-radius: 9px; color: #fff; background: var(--madeit-accent); font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+.madeit-voucher-redeem button:hover { background: color-mix(in srgb, var(--madeit-accent) 82%, #000); }
+.madeit-voucher-redeem .madeit-redeem-remove { color: #496589; background: transparent; }
+.madeit-voucher-redeem .madeit-redeem-remove:hover { color: #203f6d; background: #e8eff9; }
+
+@media (max-width: 850px) {
+    .madeit-voucher-redeem { grid-template-columns: 1fr 1fr; }
+    .madeit-redeem-heading { grid-column: 1 / -1; }
+}
+
+@media (max-width: 600px) {
+    .madeit-voucher-recipient { margin: 22px 0 18px; padding: 19px; border-radius: 16px; }
+    .madeit-voucher-choices { grid-template-columns: 1fr; gap: 9px; }
+    .madeit-voucher-choice { min-height: 76px; }
+    .madeit-voucher-redeem { grid-template-columns: 1fr; padding: 18px; }
+    .madeit-redeem-heading { grid-column: auto; }
+}
+.madeit-redeem-wrap { width: 100%; }
+.madeit-redeem-feedback { margin: 16px 0 0; padding: 12px 16px; border: 1px solid #b9e3ce; border-radius: 10px; color: #176247; background: #ecf9f1; font-size: 14px; font-weight: 650; }
+.madeit-redeem-feedback-error { border-color: #efc5c5; color: #9b2c2c; background: #fff1f1; }
+.madeit-interface-preview-title { margin-top: 24px; }
+.madeit-settings-preview .madeit-interface-preview { max-width: 620px; }
+.madeit-settings-preview .madeit-interface-preview.madeit-voucher-recipient { margin: 0 0 12px; padding: 20px; border-radius: 14px; }
+.madeit-settings-preview .madeit-interface-preview .madeit-voucher-choices { margin-top: 14px; }
+.madeit-settings-preview .madeit-interface-preview .madeit-voucher-choice { min-height: 74px; padding: 12px; }
+.madeit-settings-preview .madeit-interface-preview.madeit-voucher-redeem { grid-template-columns: minmax(0, 1.1fr) minmax(130px, 1fr) auto; margin: 0; padding: 16px; }
+.madeit-settings-preview .madeit-interface-preview .madeit-redeem-heading strong { font-size: 14px; }
+.madeit-settings-preview .madeit-interface-preview .madeit-redeem-heading p { font-size: 11px; }
+.madeit-settings-preview .madeit-interface-preview .madeit-voucher-eyebrow { font-size: 9px; }
+.madeit-settings-preview .madeit-interface-preview .madeit-redeem-actions button { min-height: 38px; padding: 8px 11px; font-size: 11px; }

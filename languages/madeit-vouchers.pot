@@ -1,0 +1,628 @@
+# Copyright (C) 2026 WCO Labs
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Madeit Vouchers 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/madeit-vouchers\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-19T06:48:02+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: madeit-vouchers\n"
+
+#. Plugin Name of the plugin
+#: madeit-vouchers.php
+#: src/Admin.php:41
+msgid "Madeit Vouchers"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: madeit-vouchers.php
+msgid "https://wco-labs.pl/en/madeit-vouchers"
+msgstr ""
+
+#. Description of the plugin
+#: madeit-vouchers.php
+msgid "Sell gift vouchers with a balance in WooCommerce. Customers receive a PDF with a code and can spend it across several orders."
+msgstr ""
+
+#. Author of the plugin
+#: madeit-vouchers.php
+msgid "WCO Labs"
+msgstr ""
+
+#. Author URI of the plugin
+#: madeit-vouchers.php
+msgid "https://wco-labs.pl/en"
+msgstr ""
+
+#: src/Admin.php:42
+#: src/Admin.php:96
+msgid "Vouchers"
+msgstr ""
+
+#: src/Admin.php:43
+#: src/Admin.php:99
+#: src/Admin.php:193
+msgid "Settings"
+msgstr ""
+
+#: src/Admin.php:63
+#: src/Admin.php:180
+#: src/Admin.php:312
+#: src/Admin.php:326
+msgid "You do not have permission to do this."
+msgstr ""
+
+#: src/Admin.php:85
+msgid "All"
+msgstr ""
+
+#: src/Admin.php:86
+#: src/Admin.php:481
+msgid "Active"
+msgstr ""
+
+#: src/Admin.php:87
+#: src/Admin.php:478
+msgid "No balance"
+msgstr ""
+
+#: src/Admin.php:88
+#: src/Admin.php:475
+msgid "Expired"
+msgstr ""
+
+#: src/Admin.php:89
+#: src/Admin.php:409
+#: src/Admin.php:472
+msgid "Revoked"
+msgstr ""
+
+#: src/Admin.php:95
+msgid "MADEIT VOUCHERS / MANAGEMENT"
+msgstr ""
+
+#: src/Admin.php:97
+msgid "Browse voucher balances and history. Select a voucher to see its details."
+msgstr ""
+
+#: src/Admin.php:103
+msgid "All vouchers"
+msgstr ""
+
+#: src/Admin.php:104
+msgid "Active with balance"
+msgstr ""
+
+#: src/Admin.php:105
+msgid "Default validity"
+msgstr ""
+
+#. translators: %d: number of months
+#: src/Admin.php:108
+#, php-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin.php:119
+msgid "Voucher list"
+msgstr ""
+
+#. translators: %s: number of results
+#: src/Admin.php:121
+#, php-format
+msgid "Results: %s"
+msgstr ""
+
+#: src/Admin.php:125
+msgid "Search by ID, order or email address"
+msgstr ""
+
+#: src/Admin.php:125
+msgid "For example 54 or customer@example.com"
+msgstr ""
+
+#. translators: %s: initial voucher value
+#: src/Admin.php:126
+#: src/Admin.php:384
+#: src/Admin.php:420
+msgid "Status"
+msgstr ""
+
+#: src/Admin.php:131
+msgid "Show results"
+msgstr ""
+
+#: src/Admin.php:133
+msgid "Clear"
+msgstr ""
+
+#: src/Admin.php:137
+msgid "No vouchers"
+msgstr ""
+
+#: src/Admin.php:137
+msgid "Change the filters or wait for the first paid order with a voucher."
+msgstr ""
+
+#. translators: 1: current page, 2: total pages
+#: src/Admin.php:149
+#, php-format
+msgid "Page %1$s of %2$s"
+msgstr ""
+
+#: src/Admin.php:152
+msgid "Previous"
+msgstr ""
+
+#: src/Admin.php:155
+msgid "Next"
+msgstr ""
+
+#: src/Admin.php:170
+msgid "Appearance"
+msgstr ""
+
+#: src/Admin.php:171
+msgid "Validity"
+msgstr ""
+
+#: src/Admin.php:192
+msgid "MADEIT VOUCHERS / CONFIGURATION"
+msgstr ""
+
+#: src/Admin.php:194
+msgid "Set the voucher appearance and the validity period."
+msgstr ""
+
+#: src/Admin.php:199
+msgid "Voucher settings"
+msgstr ""
+
+#: src/Admin.php:231
+msgid "Voucher appearance"
+msgstr ""
+
+#: src/Admin.php:232
+msgid "The colour is used for the PDF and for the forms on the product page, cart and checkout."
+msgstr ""
+
+#: src/Admin.php:238
+msgid "PDF design"
+msgstr ""
+
+#: src/Admin.php:243
+msgid "Colour scheme"
+msgstr ""
+
+#: src/Admin.php:244
+#: src/Admin.php:249
+msgid "Custom shop colour"
+msgstr ""
+
+#: src/Admin.php:249
+msgid "Used in the PDF and in the forms on the product page and in the cart."
+msgstr ""
+
+#: src/Admin.php:250
+msgid "Save appearance"
+msgstr ""
+
+#. translators: %s: link to the Pro add-on page
+#: src/Admin.php:256
+#, php-format
+msgid "Need more designs, preset colours or editable texts? %s adds them."
+msgstr ""
+
+#: src/Admin.php:257
+msgid "Madeit Vouchers Pro"
+msgstr ""
+
+#: src/Admin.php:264
+msgid "PDF voucher preview"
+msgstr ""
+
+#: src/Admin.php:272
+msgid "Form colour preview"
+msgstr ""
+
+#: src/Admin.php:296
+msgid "Voucher validity"
+msgstr ""
+
+#: src/Admin.php:297
+msgid "Default validity of new vouchers. Vouchers that were already issued keep their date."
+msgstr ""
+
+#: src/Admin.php:302
+msgid "Validity in months"
+msgstr ""
+
+#: src/Admin.php:303
+msgid "Save validity"
+msgstr ""
+
+#. translators: %s: order number
+#: src/Admin.php:382
+#, php-format
+msgid "Order #%s"
+msgstr ""
+
+#. translators: %s: order number
+#: src/Admin.php:383
+#: src/Admin.php:422
+msgid "Available balance"
+msgstr ""
+
+#. translators: %s: initial voucher value
+#: src/Admin.php:383
+#, php-format
+msgid "of %s"
+msgstr ""
+
+#: src/Admin.php:385
+#: src/Admin.php:423
+msgid "Valid until"
+msgstr ""
+
+#: src/Admin.php:386
+msgid "Details"
+msgstr ""
+
+#. translators: %s: voucher ID
+#: src/Admin.php:396
+#, php-format
+msgid "Voucher #%s not found."
+msgstr ""
+
+#: src/Admin.php:404
+msgid "Issued"
+msgstr ""
+
+#: src/Admin.php:405
+msgid "Reserved"
+msgstr ""
+
+#: src/Admin.php:406
+msgid "Settled"
+msgstr ""
+
+#: src/Admin.php:407
+msgid "Released"
+msgstr ""
+
+#: src/Admin.php:408
+msgid "Refunded"
+msgstr ""
+
+#: src/Admin.php:410
+msgid "Extended"
+msgstr ""
+
+#: src/Admin.php:415
+#: src/Settings.php:22
+msgid "VOUCHER DETAILS"
+msgstr ""
+
+#. translators: %s: voucher ID
+#: src/Admin.php:415
+#, php-format
+msgid "Voucher #%s"
+msgstr ""
+
+#. translators: %s: voucher ID
+#: src/Admin.php:416
+msgid "Close"
+msgstr ""
+
+#: src/Admin.php:419
+#: src/Plugin.php:185
+msgid "Recipient"
+msgstr ""
+
+#: src/Admin.php:421
+msgid "Value"
+msgstr ""
+
+#: src/Admin.php:424
+msgid "Order"
+msgstr ""
+
+#: src/Admin.php:442
+msgid "Recent operations"
+msgstr ""
+
+#: src/Admin.php:457
+msgid "Settings saved."
+msgstr ""
+
+#: src/Plugin.php:54
+msgid "Voucher"
+msgstr ""
+
+#: src/Plugin.php:55
+msgid "The product price is the voucher value. One voucher per order."
+msgstr ""
+
+#: src/Plugin.php:108
+msgid "Voucher recipient"
+msgstr ""
+
+#: src/Plugin.php:189
+msgid "Design"
+msgstr ""
+
+#: src/Plugin.php:218
+msgid "Voucher not issued: this version requires a currency with two decimal places."
+msgstr ""
+
+#. translators: %s: recipient email address
+#: src/Plugin.php:261
+#, php-format
+msgid "Could not send the voucher to %s. Send it again once email works."
+msgstr ""
+
+#. translators: %s: error message
+#: src/Plugin.php:265
+#, php-format
+msgid "Voucher issue error: %s"
+msgstr ""
+
+#: src/Plugin.php:441
+msgid "Paid with voucher:"
+msgstr ""
+
+#. translators: %s: error message
+#: src/Plugin.php:483
+#, php-format
+msgid "Voucher settlement error: %s"
+msgstr ""
+
+#. translators: %s: error message
+#: src/Plugin.php:500
+#, php-format
+msgid "Error restoring the balance to the voucher: %s"
+msgstr ""
+
+#. translators: %s: amount already spent from the voucher
+#: src/Plugin.php:531
+#, php-format
+msgid "Warning: the refunded voucher had already been used for %s. It needs to be settled manually."
+msgstr ""
+
+#. translators: %s: error message
+#: src/Plugin.php:535
+#, php-format
+msgid "Error revoking the refunded voucher: %s"
+msgstr ""
+
+#: src/Plugin.php:545
+msgid "The voucher reservation expired after 24 hours."
+msgstr ""
+
+#: src/Repository.php:108
+msgid "Could not record the voucher operation."
+msgstr ""
+
+#: src/Repository.php:118
+msgid "Could not secure the voucher code."
+msgstr ""
+
+#: src/Repository.php:128
+#: src/Repository.php:132
+msgid "The voucher code cannot be read."
+msgstr ""
+
+#: src/Repository.php:141
+msgid "Invalid voucher data."
+msgstr ""
+
+#: src/Repository.php:170
+msgid "Could not create the voucher."
+msgstr ""
+
+#: src/Repository.php:194
+msgid "The voucher amount must be positive."
+msgstr ""
+
+#: src/Repository.php:200
+msgid "Voucher not found."
+msgstr ""
+
+#: src/Repository.php:206
+msgid "The order already has a different voucher reservation."
+msgstr ""
+
+#: src/Repository.php:213
+msgid "The voucher has expired or its balance is too low."
+msgstr ""
+
+#: src/Repository.php:216
+msgid "Could not reserve the balance."
+msgstr ""
+
+#: src/Repository.php:222
+msgid "Could not save the reservation."
+msgstr ""
+
+#: src/Repository.php:291
+msgid "Invalid amount to restore to the voucher."
+msgstr ""
+
+#: src/Repository.php:295
+msgid "The voucher was revoked. This refund has to be settled manually."
+msgstr ""
+
+#: src/Repository.php:334
+msgid "The new expiry date must be in the future."
+msgstr ""
+
+#: src/Repository.php:340
+msgid "The expiry date can only be extended."
+msgstr ""
+
+#: src/Settings.php:23
+msgid "Who is this voucher for?"
+msgstr ""
+
+#: src/Settings.php:24
+msgid "Choose the recipient. We send the code once the order is paid."
+msgstr ""
+
+#: src/Settings.php:25
+msgid "For me"
+msgstr ""
+
+#: src/Settings.php:26
+msgid "The voucher goes to your email address"
+msgstr ""
+
+#: src/Settings.php:27
+msgid "As a gift"
+msgstr ""
+
+#: src/Settings.php:28
+msgid "We send it to the person you choose"
+msgstr ""
+
+#: src/Settings.php:29
+msgid "This is your voucher"
+msgstr ""
+
+#: src/Settings.php:30
+msgid "We send it as a PDF once the order is paid."
+msgstr ""
+
+#: src/Settings.php:31
+msgid "Recipient email address"
+msgstr ""
+
+#: src/Settings.php:32
+msgid "Message (optional)"
+msgstr ""
+
+#: src/Settings.php:33
+msgid "Add a few words of your own…"
+msgstr ""
+
+#: src/Settings.php:34
+msgid "Valid for {months} months after the order is paid. You can spend the balance over several purchases."
+msgstr ""
+
+#: src/Settings.php:35
+#: src/Settings.php:40
+msgid "VOUCHER"
+msgstr ""
+
+#: src/Settings.php:36
+msgid "Give something special"
+msgstr ""
+
+#: src/Settings.php:37
+msgid "VALUE"
+msgstr ""
+
+#: src/Settings.php:38
+msgid "VOUCHER CODE"
+msgstr ""
+
+#: src/Settings.php:39
+msgid "Valid until: {expires}"
+msgstr ""
+
+#: src/Settings.php:41
+msgid "Have a voucher code?"
+msgstr ""
+
+#: src/Settings.php:42
+msgid "Enter the code from your voucher to use the available balance."
+msgstr ""
+
+#: src/Settings.php:43
+msgid "Voucher code"
+msgstr ""
+
+#: src/Settings.php:44
+msgid "Enter code"
+msgstr ""
+
+#: src/Settings.php:45
+msgid "Apply voucher"
+msgstr ""
+
+#: src/Settings.php:46
+msgid "Remove"
+msgstr ""
+
+#: src/Settings.php:47
+msgid "Voucher applied. The balance is settled when you place the order."
+msgstr ""
+
+#: src/Settings.php:48
+msgid "Voucher removed from the cart."
+msgstr ""
+
+#: src/Settings.php:49
+msgid "The voucher code is invalid, expired or has no balance left."
+msgstr ""
+
+#: src/Settings.php:50
+msgid "Add a regular product to the cart. A voucher cannot be paid for with a voucher."
+msgstr ""
+
+#: src/Settings.php:51
+msgid "Enter a valid email address for the recipient."
+msgstr ""
+
+#: src/Settings.php:52
+msgid "Your voucher"
+msgstr ""
+
+#: src/Settings.php:53
+msgid ""
+"Your voucher is attached as a PDF.\n"
+"Code: {code}\n"
+"Value: {amount}\n"
+"Valid until: {expires}{message_section}\n"
+""
+msgstr ""
+
+#: src/Settings.php:54
+msgid ""
+"\n"
+"\n"
+"Message from the buyer:\n"
+"{message}"
+msgstr ""
+
+#: src/Settings.php:76
+#: src/Settings.php:78
+msgid "Classic"
+msgstr ""
+
+#: src/VoucherPdf.php:19
+msgid "The server needs the GD extension with TrueType font support."
+msgstr ""
+
+#: src/VoucherPdf.php:27
+msgid "Could not create the voucher image."
+msgstr ""
+
+#: src/VoucherPdf.php:38
+msgid "The PDF font is missing."
+msgstr ""
+
+#: src/VoucherPdf.php:83
+msgid "Could not prepare the PDF graphic."
+msgstr ""
+
+#: src/VoucherPdf.php:100
+msgid "Could not save the voucher PDF."
+msgstr ""
