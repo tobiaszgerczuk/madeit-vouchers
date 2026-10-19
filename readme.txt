@@ -1,11 +1,11 @@
 === MadeIT Vouchers ===
-Contributors: wcolabs
+Contributors: madeitpl
 Tags: woocommerce, gift voucher, gift card, store credit, pdf
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
 Requires Plugins: woocommerce
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,9 @@ Voucher tables are financial records, so they are kept when the plugin is delete
 
 == Changelog ==
 
+= 1.0.2 =
+* Readme: the contributor is now the WordPress.org user madeitpl. No functional changes.
+
 = 1.0.1 =
 * The publisher is now called MadeIT Labs. No functional changes.
 
@@ -85,6 +88,9 @@ Voucher tables are financial records, so they are kept when the plugin is delete
 * First public release.
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+Readme update only. No functional changes.
 
 = 1.0.1 =
 The publisher is now called MadeIT Labs. No functional changes.

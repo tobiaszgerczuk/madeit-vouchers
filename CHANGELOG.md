@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- Readme: the contributor is now the WordPress.org user madeitpl. No functional changes.
+
 ## 1.0.1
 
 - The publisher is now called MadeIT Labs (plugin header, texts and translations). No functional changes.
