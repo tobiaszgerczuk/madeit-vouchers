@@ -32,7 +32,7 @@ Customers enter the code in a dedicated field above the cart or checkout (classi
 
 **Madeit Vouchers Pro**
 
-An optional add-on from WCO Labs (sold separately at [wco-labs.pl/en](https://wco-labs.pl/en/plugins/madeit-vouchers-pro)) extends the plugin with additional PDF designs and preset colours, editable customer-facing texts, restoring balance after a partial refund and extending the validity of single vouchers. The free plugin is complete on its own and does not contact any external service.
+An optional add-on from WCO Labs (sold separately at [labs.madeit.pl/en](https://labs.madeit.pl/en/plugins/madeit-vouchers-pro)) extends the plugin with additional PDF designs and preset colours, editable customer-facing texts, restoring balance after a partial refund and extending the validity of single vouchers. The free plugin is complete on its own and does not contact any external service.
 
 == Installation ==
 

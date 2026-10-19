@@ -12,7 +12,7 @@ defined('ABSPATH') || exit;
 
 final class Admin
 {
-    public const UPGRADE_URL = 'https://wco-labs.pl/en/plugins/madeit-vouchers-pro';
+    public const UPGRADE_URL = 'https://labs.madeit.pl/en/plugins/madeit-vouchers-pro';
 
     private wpdb $db;
 
