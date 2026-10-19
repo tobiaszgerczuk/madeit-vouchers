@@ -38,7 +38,7 @@ final class Admin
 
     public function menu(): void
     {
-        add_menu_page(__('Madeit Vouchers', 'madeit-vouchers'), __('Madeit Vouchers', 'madeit-vouchers'), 'manage_woocommerce', 'madeit-vouchers', [$this, 'renderVouchers'], 'dashicons-tickets-alt', 56);
+        add_menu_page(__('MadeIT Vouchers', 'madeit-vouchers'), __('MadeIT Vouchers', 'madeit-vouchers'), 'manage_woocommerce', 'madeit-vouchers', [$this, 'renderVouchers'], 'dashicons-tickets-alt', 56);
         add_submenu_page('madeit-vouchers', __('Vouchers', 'madeit-vouchers'), __('Vouchers', 'madeit-vouchers'), 'manage_woocommerce', 'madeit-vouchers', [$this, 'renderVouchers']);
         add_submenu_page('madeit-vouchers', __('Settings', 'madeit-vouchers'), __('Settings', 'madeit-vouchers'), 'manage_woocommerce', 'madeit-vouchers-settings', [$this, 'renderSettings']);
     }
@@ -254,7 +254,7 @@ final class Admin
                             printf(
                                 /* translators: %s: link to the Pro add-on page */
                                 esc_html__('Need more designs, preset colours or editable texts? %s adds them.', 'madeit-vouchers'),
-                                '<a href="'.esc_url(self::UPGRADE_URL).'" target="_blank" rel="noopener">'.esc_html__('Madeit Vouchers Pro', 'madeit-vouchers').'</a>'
+                                '<a href="'.esc_url(self::UPGRADE_URL).'" target="_blank" rel="noopener">'.esc_html__('MadeIT Vouchers Pro', 'madeit-vouchers').'</a>'
                             );
                             ?>
                         </p>

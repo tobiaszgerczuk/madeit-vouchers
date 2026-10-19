@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Madeit Vouchers
+ * Plugin Name: MadeIT Vouchers
  * Plugin URI: https://labs.made-it.pl/en/plugins/madeit-vouchers-pro
  * Description: Sell gift vouchers with a balance in WooCommerce. Customers receive a PDF with a code and can spend it across several orders.
  * Version: 1.0.0

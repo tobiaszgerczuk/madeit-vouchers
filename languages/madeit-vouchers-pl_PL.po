@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Madeit Vouchers 1.0.0\n"
+"Project-Id-Version: MadeIT Vouchers 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/madeit-vouchers\n"
 "Last-Translator: WCO Labs <sklep@wco-labs.pl>\n"
 "Language-Team: Polish\n"
@@ -19,8 +19,8 @@ msgstr ""
 #. Plugin Name of the plugin
 #: madeit-vouchers.php
 #: src/Admin.php:41
-msgid "Madeit Vouchers"
-msgstr "Madeit Vouchers"
+msgid "MadeIT Vouchers"
+msgstr "MadeIT Vouchers"
 
 #. Plugin URI of the plugin
 #: madeit-vouchers.php
@@ -225,8 +225,8 @@ msgid "Need more designs, preset colours or editable texts? %s adds them."
 msgstr "Potrzebujesz więcej wzorów, gotowych kolorów lub edycji tekstów? Dodaje je %s."
 
 #: src/Admin.php:257
-msgid "Madeit Vouchers Pro"
-msgstr "Madeit Vouchers Pro"
+msgid "MadeIT Vouchers Pro"
+msgstr "MadeIT Vouchers Pro"
 
 #: src/Admin.php:264
 msgid "PDF voucher preview"

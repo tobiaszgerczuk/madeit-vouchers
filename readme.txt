@@ -1,4 +1,4 @@
-=== Madeit Vouchers ===
+=== MadeIT Vouchers ===
 Contributors: wcolabs
 Tags: woocommerce, gift voucher, gift card, store credit, pdf
 Requires at least: 6.6
@@ -13,7 +13,7 @@ Sell gift vouchers with a balance in WooCommerce. Customers get a PDF with a cod
 
 == Description ==
 
-Madeit Vouchers turns any simple WooCommerce product into a gift voucher. The product price is the voucher value. When the order is paid, the plugin creates a unique code, generates a PDF and emails it to the buyer or to the person they want to give it to.
+MadeIT Vouchers turns any simple WooCommerce product into a gift voucher. The product price is the voucher value. When the order is paid, the plugin creates a unique code, generates a PDF and emails it to the buyer or to the person they want to give it to.
 
 Customers enter the code in a dedicated field above the cart or checkout (classic and block versions). The voucher balance is reserved when the order is placed, released if the order is cancelled or payment fails, and settled when the order is paid. Whatever is left stays on the voucher for the next purchase.
 
@@ -30,7 +30,7 @@ Customers enter the code in a dedicated field above the cart or checkout (classi
 * Default validity period in months.
 * Fully translatable.
 
-**Madeit Vouchers Pro**
+**MadeIT Vouchers Pro**
 
 An optional add-on from WCO Labs (sold separately at [labs.made-it.pl/en](https://labs.made-it.pl/en/plugins/madeit-vouchers-pro)) extends the plugin with additional PDF designs and preset colours, editable customer-facing texts, restoring balance after a partial refund and extending the validity of single vouchers. The free plugin is complete on its own and does not contact any external service.
 
@@ -39,7 +39,7 @@ An optional add-on from WCO Labs (sold separately at [labs.made-it.pl/en](https:
 1. Make sure WooCommerce is installed and active.
 2. Upload the plugin to `/wp-content/plugins/` or install it from the Plugins screen, then activate it.
 3. Edit a simple product, open the General tab of Product data and tick "Voucher". Set the price to the voucher value.
-4. Open Madeit Vouchers → Settings to choose the colour and the validity period.
+4. Open MadeIT Vouchers → Settings to choose the colour and the validity period.
 
 Your site needs working outgoing email, because the voucher PDF is sent by email. The PHP GD extension with FreeType support is required to render the PDF.
 
