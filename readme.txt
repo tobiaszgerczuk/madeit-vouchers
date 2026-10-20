@@ -5,7 +5,7 @@ Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
 Requires Plugins: woocommerce
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,9 @@ Voucher tables are financial records, so they are kept when the plugin is delete
 
 == Changelog ==
 
+= 1.0.4 =
+* Fixed: in the checkout block a voucher that covers the whole cart ended with "No payment method provided". The voucher balance is now also deducted from the order created by the block.
+
 = 1.0.3 =
 * Removed "Tested up to" from the plugin header. No functional changes.
 
@@ -91,6 +94,9 @@ Voucher tables are financial records, so they are kept when the plugin is delete
 * First public release.
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+Fixes placing an order in the checkout block when a voucher covers the whole cart.
 
 = 1.0.3 =
 No functional changes.

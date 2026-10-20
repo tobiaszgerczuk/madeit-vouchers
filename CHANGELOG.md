@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+- Fixed: in the checkout block a voucher that covers the whole cart ended with "No payment method provided". The voucher balance is now also deducted from the order created by the block.
+
 ## 1.0.3
 
 - Removed the "Tested up to" line from the plugin header (it lives only in readme.txt). No functional changes.

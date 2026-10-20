@@ -34,6 +34,8 @@ final class Plugin
         add_filter('woocommerce_calculated_total', [$this, 'applyBalance'], 20, 2);
         add_filter('woocommerce_get_order_item_totals', [$this, 'showVoucherPayment'], 10, 2);
         add_action('woocommerce_checkout_order_created', [$this, 'reserveForOrder']);
+        add_filter('woocommerce_order_needs_payment', [$this, 'blocksOrderNeedsPayment'], 10, 2);
+        add_action('woocommerce_store_api_checkout_order_processed', [$this, 'deductFromBlocksOrder'], 5);
         add_action('woocommerce_store_api_checkout_order_processed', [$this, 'reserveForOrder']);
         add_action('woocommerce_thankyou', [$this, 'clearRedeemedCode']);
         add_action('madeit_vouchers_check_pending_order', [$this, 'checkPendingOrder']);
@@ -448,6 +450,35 @@ final class Plugin
         }
 
         return $result;
+    }
+
+    public function blocksOrderNeedsPayment(bool $needsPayment, WC_Order $order): bool
+    {
+        if (! $needsPayment || ! WC()->session || $order->get_meta('_madeit_voucher_id')) {
+            return $needsPayment;
+        }
+        $amount = (int) WC()->session->get('madeit_voucher_amount_cents', 0);
+        if ((string) WC()->session->get('madeit_voucher_code', '') === '' || $amount <= 0) {
+            return $needsPayment;
+        }
+
+        return (int) round((float) $order->get_total() * 100) > $amount;
+    }
+
+    /**
+     * The checkout block recalculates the order total from its line items, which drops the cart-level voucher balance.
+     */
+    public function deductFromBlocksOrder(WC_Order $order): void
+    {
+        if (! WC()->session || $order->get_meta('_madeit_voucher_id')) {
+            return;
+        }
+        $amount = (int) WC()->session->get('madeit_voucher_amount_cents', 0);
+        if ((string) WC()->session->get('madeit_voucher_code', '') === '' || $amount <= 0) {
+            return;
+        }
+        $order->set_total(max(0, (float) $order->get_total() - $amount / 100));
+        $order->save();
     }
 
     public function reserveForOrder(WC_Order $order): void
