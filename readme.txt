@@ -1,6 +1,6 @@
 === MadeIT Vouchers ===
 Contributors: madeitpl
-Tags: woocommerce, gift voucher, gift card, store credit, pdf
+Tags: woocommerce, gift voucher, gift card, voucher, store credit
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
