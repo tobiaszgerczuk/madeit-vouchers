@@ -109,11 +109,25 @@ final class Repository
         }
     }
 
+    /**
+     * Plugin-owned encryption key, independent of WordPress authentication salts.
+     */
+    private function secretKey(): string
+    {
+        $stored = get_option('madeit_vouchers_secret_key');
+        if (! is_string($stored) || strlen($stored) !== 64 || ! ctype_xdigit($stored)) {
+            $stored = bin2hex(random_bytes(32));
+            update_option('madeit_vouchers_secret_key', $stored, false);
+        }
+
+        return hex2bin($stored);
+    }
+
     private function encrypt(string $code): string
     {
         $nonce = random_bytes(12);
         $tag = '';
-        $cipher = openssl_encrypt($code, 'aes-256-gcm', hash('sha256', wp_salt('auth'), true), OPENSSL_RAW_DATA, $nonce, $tag);
+        $cipher = openssl_encrypt($code, 'aes-256-gcm', $this->secretKey(), OPENSSL_RAW_DATA, $nonce, $tag);
         if ($cipher === false) {
             throw new RuntimeException(esc_html__('Could not secure the voucher code.', 'madeit-vouchers'));
         }
@@ -127,7 +141,7 @@ final class Repository
         if ($raw === false || strlen($raw) < 28) {
             throw new RuntimeException(esc_html__('The voucher code cannot be read.', 'madeit-vouchers'));
         }
-        $code = openssl_decrypt(substr($raw, 28), 'aes-256-gcm', hash('sha256', wp_salt('auth'), true), OPENSSL_RAW_DATA, substr($raw, 0, 12), substr($raw, 12, 16));
+        $code = openssl_decrypt(substr($raw, 28), 'aes-256-gcm', $this->secretKey(), OPENSSL_RAW_DATA, substr($raw, 0, 12), substr($raw, 12, 16));
         if ($code === false) {
             throw new RuntimeException(esc_html__('The voucher code cannot be read.', 'madeit-vouchers'));
         }
