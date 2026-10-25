@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.5
+
+- Security: voucher codes are now encrypted with a plugin-owned random key instead of a key derived from the WordPress authentication salts.
+- Removed bundled translation files (translations are delivered by translate.wordpress.org).
+
 ## 1.0.4
 
 - Fixed: in the checkout block a voucher that covers the whole cart ended with "No payment method provided". The voucher balance is now also deducted from the order created by the block.

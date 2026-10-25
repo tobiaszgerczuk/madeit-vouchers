@@ -5,7 +5,7 @@ Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
 Requires Plugins: woocommerce
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,10 @@ Voucher tables are financial records, so they are kept when the plugin is delete
 
 == Changelog ==
 
+= 1.0.5 =
+* Security: voucher codes are now encrypted with a plugin-owned random key instead of a key derived from the WordPress authentication salts.
+* Removed bundled translation files; translations come from translate.wordpress.org.
+
 = 1.0.4 =
 * Fixed: in the checkout block a voucher that covers the whole cart ended with "No payment method provided". The voucher balance is now also deducted from the order created by the block.
 
@@ -94,6 +98,9 @@ Voucher tables are financial records, so they are kept when the plugin is delete
 * First public release.
 
 == Upgrade Notice ==
+
+= 1.0.5 =
+Voucher codes use a plugin-owned encryption key. Codes issued by earlier versions cannot be read after updating.
 
 = 1.0.4 =
 Fixes placing an order in the checkout block when a voucher covers the whole cart.

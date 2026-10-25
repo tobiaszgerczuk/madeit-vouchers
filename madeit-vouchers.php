@@ -3,7 +3,7 @@
  * Plugin Name: MadeIT Vouchers
  * Plugin URI: https://labs.made-it.pl/en/plugins/madeit-vouchers-pro
  * Description: Sell gift vouchers with a balance in WooCommerce. Customers receive a PDF with a code and can spend it across several orders.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Requires at least: 6.6
  * Requires PHP: 8.0
  * Requires Plugins: woocommerce
@@ -23,7 +23,7 @@ use Madeit\Vouchers\Repository;
 defined('ABSPATH') || exit;
 
 define('MADEIT_VOUCHERS_FILE', __FILE__);
-define('MADEIT_VOUCHERS_VERSION', '1.0.4');
+define('MADEIT_VOUCHERS_VERSION', '1.0.5');
 
 require_once __DIR__.'/src/Settings.php';
 require_once __DIR__.'/src/Repository.php';
